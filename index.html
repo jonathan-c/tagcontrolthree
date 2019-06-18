@@ -14,6 +14,32 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="https://tagcontrol-cdn.evidon.com/script/v1/tagcontrol.js" companyId='6239'></script>
+
+  <!-- first party tags callback -->
+  <script>
+    window.tagControl = {"executed": false}
+    setTimeout(function() {
+      if (!window.tagControl.executed) {
+        window.tagControl.tagControlCallback();
+      }
+    }, 1000);
+
+    window.tagControl.tagControlCallback = function () {
+      if (!window.tagControl.executed) {
+        window.tagControl.executed = true;
+        // Add first party js here
+        // =========================
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-586SLRJ');
+        // =========================
+      }
+    }
+  </script>
   <!-- =======================================================
     Theme Name: Baker
     Theme URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
